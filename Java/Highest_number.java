@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Highest_number
 {
-    public static void main(String[] args) 
+    public static void main(String[] x) 
     {
         Scanner sc=new Scanner(System.in);
         A ob=new A();

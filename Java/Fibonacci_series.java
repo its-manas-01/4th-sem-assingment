@@ -1,6 +1,8 @@
 import java.util.*;
-public class Fibonacci_series {
-    public static void main(String[] args) {
+public class Fibonacci_series 
+{
+    public static void main(String[] args) 
+    {
         Scanner scanner=new Scanner(System.in);
         System.out.println("Enter the range:-");
         int n=scanner.nextInt();
@@ -23,7 +25,6 @@ public class Fibonacci_series {
             }
             System.out.println("The value of fibonacci series "+n+" position is:-"+c);
         }
-        
         scanner.close();
     }
 }

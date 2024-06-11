@@ -11,25 +11,25 @@ public class Rainbow
         switch(choice)
         {
             case 1:
-                System.out.println("Violet");
+                System.out.println(a[0]);
                 break;
             case 2:
-                System.out.println("Indigo");
+                System.out.println(a[1]);
                 break;
             case 3:
-                System.out.println("Blue");
+                System.out.println(a[2]);
                 break;
             case 4:
-                System.out.println("Green");
+                System.out.println(a[3]);
                 break;
             case 5:
-                System.out.println("Yellow");
+                System.out.println(a[4]);
                 break;
             case 6:
-                System.out.println("Orange");
+                System.out.println(a[5]);
                 break;
             case 7:
-                System.out.println("Red");
+                System.out.println(a[6]);
                 break;
             default:
                 System.out.println("Invalid choice");
