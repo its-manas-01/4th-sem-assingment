@@ -19,8 +19,8 @@ void drawLineDDA(int x1, int y1, int x2, int y2) {
 
     for (int i = 0; i <= steps; i++) {
 	putpixel(ROUND(x), ROUND(y), WHITE);
-        x += xIncrement;
-        y += yIncrement;
+        x += xIncrement
+        y += yIncrement
     }
 }
 
