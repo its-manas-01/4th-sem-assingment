@@ -3,9 +3,26 @@
 #include <graphics.h>
 #include <stdlib.h>
 #include <math.h>
-#include <dos.h>
+
 
 #define ROUND(a) (int)(a+0.5)
+
+
+void BounderyFill4(int x,iny y,int fill,int boundery)
+{
+    int current;
+    current= getpixel(x,y);
+    if(current!=boundery && current!=fill)
+    {
+        setcolor(fill);
+        setpixel(x,y);
+        BounderyFill4(x+1,y,fill,boundery);
+        BounderyFill4(x-1,y,fill,boundery);
+        BounderyFill4(x,y+1,fill,boundery);
+        BounderyFill4(x,y-1,fill,boundery);
+    }
+}
+
 
 void drawLineDDA(int x1, int y1, int x2, int y2) {
     int dx = x2 - x1;
@@ -30,12 +47,15 @@ int main() {
     int gd = DETECT, gm;
     initgraph(&gd, &gm, "c:\\turboc3\\bgi");
 
-    printf("Enter the first point:-");
-    scanf("%d%d",&x1,&y1);
-    printf("Enter the last point:-");
-    scanf("%d%d",&x2,&y2);
+    // printf("Enter the first point:-");
+    // scanf("%d%d",&x1,&y1);
+    // printf("Enter the last point:-");
+    // scanf("%d%d",&x2,&y2);
 
-    drawLineDDA(x1, y1, x2, y2);
+    drawLineDDA(10,20,50,20);
+    drawLineDDA(50,20,50,50);
+    drawLineDDA(50,50,10,50);
+    drawLineDDA(10,50,10,20);
 
     getch();
     return 0;
