@@ -7,18 +7,35 @@ class  input
         x=a;
     }   
 }
-class output extends input
+class calc extends input
 {
-    void cal()
+    boolean flag = false;
+    void cal(int a)
     {
-        if(x%400==0&&x%4==0)
-    {
-        System.out.println("leap year");
+        get(a);
+        if ((x % 400 == 0 && x % 4 == 0) || (x % 4 == 0 && x % 100 != 0))
+        {
+            flag = true;
+        }
+        else
+        {
+            flag = false;
+        }
     }
-    else
+}
+class output extends calc
+{
+    void display(int a)
     {
-        System.out.println("not a leap year");
-    }
+        cal(a);
+        if (flag == true)
+        {
+            System.out.println(x + " is a leap year");
+        }
+        else
+        {
+            System.out.println(x + " is not a leap year");
+        }
     }
 }
 public class Leap_year 
@@ -28,8 +45,7 @@ public class Leap_year
         output ob =new output();
         Scanner scanner = new Scanner(System.in);
         System.out.println("enter the year");
-        ob.get(scanner.nextInt());
-        ob.cal();
+        ob.display(scanner.nextInt());
         scanner.close(); 
     } 
 }
